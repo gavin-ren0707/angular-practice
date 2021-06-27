@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" [class]="{hightlight:hightlightTitle}"
+    [style]="{'font-size':counter+'px'}" >conduit</a>
+    <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" [(ngModel)]="keyword">
+    <button class="btn btn-sm btn-primary" (click)="doSearch($event)">
+      <i class="ion-search" ></i>
+    </button>
+    <span *ngIf="keyword === ''" class="hightlight">請您輸入查詢條件</span>
+    <p [class]="{hightlight:hightlightTitle}">{{keyword}}</p>
+    <!-- <ng-container>我愛你</ng-container> -->
+
+  </div>
+</nav>
